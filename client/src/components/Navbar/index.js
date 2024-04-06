@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { IoMenu, IoClose } from "react-icons/io5";
 import "./index.css";
 
 const Navbar = () => {
@@ -11,30 +12,41 @@ const Navbar = () => {
           className="navbar-home-logo"
         />
       </Link>
-      <div className="inner-navbar-container">
-        <ul className="unordered-list">
-          <Link to="/featured-weddings" className="link-propety">
-            <li>Featured Weddings</li>
-          </Link>
-          <Link to="/client-gallery" className="link-propety">
-            <li>Client Gallery</li>
-          </Link>
-          <Link to="/contact-us" className="link-propety">
-            <li>Contact Us</li>
-          </Link>
-          <Link to="/faq" className="link-propety">
-            <li>F.A.Q's</li>
-          </Link>
-        </ul>
-        <ul className="login-rgister-ul">
-          <Link to="/login" className="link-propety">
-            <li className="login">Login</li>
-          </Link>
-          <Link to="/register" className="link-propety">
-            <button className="became-a-host-button">Became A Host</button>
-          </Link>
-        </ul>
-      </div>
+      <input type="checkbox" id="sidebar-check" />
+      <label htmlFor="sidebar-check" className="open-sidebar-button">
+        <IoMenu size={32} />
+      </label>
+      <ul className="unordered-list">
+        <label htmlFor="sidebar-check" className="close-sidebar-button">
+          <IoClose size={32} />
+        </label>
+        <Link to="/featured-weddings" className="link-propety">
+          <li>Featured Weddings</li>
+        </Link>
+        <Link to="/client-gallery" className="link-propety">
+          <li>Client Gallery</li>
+        </Link>
+        <Link to="/contact-us" className="link-propety">
+          <li>Contact Us</li>
+        </Link>
+        <Link to="/faq" className="link-propety-specific">
+          <li>F.A.Q's</li>
+        </Link>
+        <Link to="/login" className="link-propety-specific">
+          <li className="login-md-display">Login</li>
+        </Link>
+        <Link to="/register" className="link-propety-specific">
+          <li className="became-a-host-button-md">Became A Host</li>
+        </Link>
+      </ul>
+      <ul className="login-rgister-ul">
+        <Link to="/login" className="link-propety-specific">
+          <li className="login">Login</li>
+        </Link>
+        <Link to="/register" className="link-propety-specific">
+          <button className="became-a-host-button">Became A Host</button>
+        </Link>
+      </ul>
     </nav>
   );
 };
