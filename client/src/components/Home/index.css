@@ -1,9 +1,216 @@
-.heading{
-    text-align: center;
-    color: black;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+:root{
+    --text: #192331;
+    --background: #f6eddf;
+    --primary: #e4b6a0;
+    --secondary: #a55d40;
+    --accent: #ce8458;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .home-container{
-    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     width: 100vw;
+    margin-top: 50px;
+}
+
+.home-image-container{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: none;
+    background-image: url('https://res.cloudinary.com/dlxjzmiig/image/upload/v1712407403/photo_cfd4bm.png');
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.home-container-heading{
+    color: var(--text);
+    font-weight: 600;
+    font-family: 'Satisfy', cursive;
+    font-size: 8em;
+    align-self: center;
+}
+
+.for-gradient{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: linear-gradient(to top, var(--secondary), rgba(0, 0, 0, 0));
+}
+
+.home-container-para{
+    margin: 0;
+    color: var(--background);
+    font-weight: 400;
+    font-family: 'Londrina Solid', cursive;
+    font-size: 2em;
+}
+
+.home-container-description{
+    margin: 0;
+    color: #ecd8bc;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+
+.container-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+    background-color:var(--secondary);
+    padding-top: 50px;
+    margin: 0;
+}
+
+.container-heading-home{
+    margin: 0;
+    color: var(--text);
+    font-weight: 400;
+    font-family: 'Londrina Solid', cursive;
+    font-size: 3em;
+}
+
+.services-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.service-card-heading{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--background);
+    margin-left: 30px;
+}
+
+.service-card-para{
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--background);
+}
+
+.service-card-button{
+    font-family: 'poppins', sans-serif;
+    padding: 8px 17px;
+    border-radius: 30px;
+    border: 2px solid var(--text);
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.service-card-button:hover{
+    background-color: var(--text);
+    color: var(--background);
+}
+
+.button-md-devices{
+    display: none;
+}
+
+.button-lg-devices{
+    display: flex;
+}
+
+
+
+.cultures-container{
+    background-color: var(--text);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+}
+
+.cultures{
+    color: var(--primary);
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-image-container{
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .home-container-heading{
+        font-size: 3em;
+    }
+
+    .home-container-para{
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .home-container-description{
+        text-align: center;
+        font-size: 0.7em;
+    }
+
+    .container-home{
+        height: 100vh;
+    }
+
+    .container-heading-home{
+        font-size: 2em;
+    }
+
+    .services-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 90%;
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .service-card-heading{
+        font-size: 20px;
+    }
+    
+    .service-card-para{
+        font-size: 12px;
+    }
+    
+    .service-card-button{
+        padding: 5px 10px;
+        border-radius: 30px;
+        border: 2px solid var(--text);
+        margin-left: 30px;
+        font-size: 12px;
+        color: var(--text);
+        background-color: var(--background);
+    }
+
+    .button-lg-devices{
+        display: none;
+    }
+
+    .button-md-devices{
+        display: block;
+    }
 }
