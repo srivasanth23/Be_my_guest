@@ -1,3 +1,4 @@
+import CarosoulEffect from "../Carosoul";
 import Navbar from "../Navbar";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import "./index.css";
@@ -69,11 +70,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="cultures-container">
-        <h2 className="container-heading-home cultures">
-          - Explore about Indian Wedding Cultures -
-        </h2>
-      </div>
+      <CarosoulEffect/>
     </>
   );
 };

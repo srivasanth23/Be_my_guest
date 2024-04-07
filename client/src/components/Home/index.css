@@ -134,11 +134,9 @@ body::-webkit-scrollbar{
     display: flex;
 }
 
-
-
 .cultures-container{
     background-color: var(--text);
-    height: 70vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
