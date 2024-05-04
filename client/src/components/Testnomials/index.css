@@ -1,0 +1,126 @@
+
+.testnomials-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--background);
+    height: 100vh;
+}
+
+.testnomials-heading{
+    color: var(--secondary-text);
+    font-weight: 400;
+    font-family: 'Satisfy', cursive;
+    font-size: 3em;
+    align-self: center;
+    color: var(--primary-text);
+}
+
+.testnomials-cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.testnomials-card{
+    background-color: var(--secondary-text);
+    border-radius: 5px;
+    height: 130px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-left: 75px;
+    padding: 10px;
+}
+
+.testnomials-image{
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    margin: 6px;
+}
+
+.testnomials-card-content{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.inverted-commas{
+    height: 30px;
+    width: 50px;
+}
+
+.testnomials-card-para{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100px;
+}
+
+.testnomials-card-para-p{
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    color: var(--primary-text);
+}
+
+.testnomials-card-para-writter{
+    margin: 0;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    align-self: flex-end;
+    color: var(--primary-text);
+}
+
+@media screen and (max-width: 768px) {
+    .test{
+        font-size: 20px;
+    }
+
+    .testnomials-container{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .testnomials-card{
+        border-radius: 4px;
+        height: 90px;
+        width: 270px;
+        margin: 10px 30px;
+        padding: 5px;
+    }
+
+    .testnomials-image{
+        height: 50px;
+        width: 50px;
+        margin-right: 2px;
+    }
+
+    .inverted-commas{
+        height: 15px;
+        width: 30px;
+    }
+    
+    .testnomials-card-para-p{
+        margin-top: 3px;
+        font-size: 11px;
+    }
+
+    .testnomials-card-para-writter{
+        font-size: 13px;
+    }
+
+    .hide-mb-view{
+        display: none;
+    }
+}

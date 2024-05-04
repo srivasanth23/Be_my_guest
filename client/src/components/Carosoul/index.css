@@ -1,0 +1,37 @@
+.cultures-image{
+    width: 50vw;
+    height: 40vh;
+    margin: 50px 20px;
+    z-index: 999;
+}
+
+.carousal-container{
+    background-color: var(--primary-text);
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .cultures-image{
+        width: 50vw;
+        height: 20vh;
+        margin: 30px 10px;
+    }
+
+    .carousal-container{
+        background-color: var(--primary-text);
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px;
+    }
+
+}
+

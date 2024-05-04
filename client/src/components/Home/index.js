@@ -1,3 +1,6 @@
+import CarosoulEffect from "../Carosoul";
+import Testnomials from "../Testnomials";
+import FeaturedWedding from "../FeaturedWedding";
 import Navbar from "../Navbar";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import "./index.css";
@@ -69,10 +72,18 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="cultures-container">
-        <h2 className="container-heading-home cultures">
-          - Explore about Indian Wedding Cultures -
-        </h2>
+      <CarosoulEffect />
+      <div className="compress-container">
+        <div className="inner-compress-container">
+          <Testnomials />
+          <FeaturedWedding />
+        </div>
+      </div>
+      <div className="tesnomials-mobile-view">
+        <Testnomials />
+      </div>
+      <div className="featured-wedding-mobile-view">
+        <FeaturedWedding />
       </div>
     </>
   );

@@ -1,0 +1,12 @@
+:root{
+    --primary-text: #192331; (dark grey color for background, headings)
+    --secondary-text: #f6eddf; (for text)
+    --primary: #e4b6a0;
+    --background: #a55d40; (for background)
+    --accent: #ce8458; (for navbar)
+}
+
+
+for para = 'Londrina Solid', cursive;
+for description = 'Poppins', sans-serif;
+for heading = 'Yanone Kaffeesatz', cursive; (or) 'Satisfy', cursive;
