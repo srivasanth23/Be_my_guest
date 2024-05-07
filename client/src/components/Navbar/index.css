@@ -6,14 +6,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    background-color: var(--accent);
+    align-items: center; 
     padding: 0px 50px;
-    box-shadow: #192331 0px 0px 10px;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1000;
+    font-weight: 450;
+    background: var(--accent);
+}
+
+.navbar.active{
+    background-color: var(--primary-text);
+    box-shadow: var(--shadow);
 }
 
 .navbar-home-logo{
@@ -32,40 +37,42 @@
 }
 
 .link-propety{
-    color: var(--primary-text);
+    color: var(--secondary-text);
     font-size: 17px;
     text-decoration: none;
     list-style-type: none;
-    font-family: 'ubuntu';
+    font-family: 'Josefin Sans';
     align-items: center;
     margin: 0;
     border-right: 2px solid var(--primary-text);
     padding-right: 35px;
+    border-color: var(--primary);
 }
 
 .link-propety-specific{
-    color: var(--primary-text);
+    color: var(--secondary-text);
     font-size: 17px;
     text-decoration: none;
     list-style-type: none;
-    font-family: 'ubuntu';
+    font-family: 'Josefin Sans';
     align-items: center;
     margin: 0;
 }
 
 .link-propety-specific:hover, .link-propety:hover{
     cursor: pointer;
-    color: var(--secondary-text);
+    font-size: larger;
 }
 
+
 .became-a-host-button{
-    background-color: var(--primary-text);
-    color: var(--accent);
+    background-color: #4a485b;
+    color: var(--secondary-text);
     border-radius: 20px;
     font-size: 15px;
     width: 150px;
     height: 30px;
-    font-weight: 550;
+    font-weight: 450;
     display: flex;
     flex-direction: row;
     justify-content: center;
