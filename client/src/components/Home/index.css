@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root{
     --primary-text: #192331;
@@ -9,6 +10,12 @@
     --primary: #e4b6a0;
     --background: #a55d40;
     --accent: #ce8458;
+    --sm: 640px;
+    --md: 768px;
+    --lg: 1024px;
+    --xl: 1280px;
+    --xxl: 1536px;
+    --shadow: #192331 0px 0px 10px; 
 }
 
 
@@ -21,7 +28,6 @@ body::-webkit-scrollbar{
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    margin-top: 50px;
 }
 
 .home-image-container{
@@ -175,6 +181,7 @@ body::-webkit-scrollbar{
 
 .featured-wedding-mobile-view{
     background-color: var(--primary-text);
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -255,4 +262,9 @@ body::-webkit-scrollbar{
     .tesnomials-mobile-view{
         display: flex;
     }
+
+    .featured-wedding-mobile-view{
+        display: flex;
+    }
+    
 }
