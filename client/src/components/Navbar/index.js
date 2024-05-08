@@ -57,8 +57,8 @@ const Navbar = () => {
         <Link to="/login" className="link-propety-specific">
           <li className="login">Login</li>
         </Link>
-        <Link to="/register" className={navbar ? "link-propety-specific" : ''}>
-          <button className="became-a-host-button">Became A Host</button>
+        <Link to="/register" className="link-propety-specific">
+          <button className="became-a-host-button">Host your Wedding</button>
         </Link>
       </ul>
     </nav>

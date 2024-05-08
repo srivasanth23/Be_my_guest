@@ -4,20 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-:root{
-    --primary-text: #192331;
-    --secondary-text: #f6eddf;
-    --primary: #e4b6a0;
-    --background: #a55d40;
-    --accent: #ce8458;
-    --sm: 640px;
-    --md: 768px;
-    --lg: 1024px;
-    --xl: 1280px;
-    --xxl: 1536px;
-    --shadow: #192331 0px 0px 10px; 
-}
-
 
 body::-webkit-scrollbar{
     display: none;
