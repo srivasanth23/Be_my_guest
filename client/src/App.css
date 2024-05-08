@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+:root{
+  --primary-text: #192331;
+  --secondary-text: #f6eddf;
+  --primary: #e4b6a0;
+  --background: #a55d40;
+  --accent: #ce8458;
+  --sm: 640px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1280px;
+  --xxl: 1536px;
+  --shadow: #192331 0px 0px 10px; 
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -2,12 +2,14 @@ import CarosoulEffect from "../Carosoul";
 import Testnomials from "../Testnomials";
 import FeaturedWedding from "../FeaturedWedding";
 import Navbar from "../Navbar";
+import UpperNavbar from "../UpperNavbar";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import "./index.css";
 
 const Home = () => {
   return (
     <>
+      <UpperNavbar/>
       <Navbar />
       <div className="home-container">
         <div className="home-image-container">
@@ -45,7 +47,7 @@ const Home = () => {
               </li>
             </ul>
             <button className="service-card-button button-lg-devices">
-              Featured Wedding <MdOutlineKeyboardArrowDown size={28} />
+              Featured Wedding <MdOutlineKeyboardArrowDown size={22} />
             </button>
             <button className="service-card-button button-md-devices">
               Featured Wedding{" "}
