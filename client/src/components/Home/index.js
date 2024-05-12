@@ -2,78 +2,48 @@ import CarosoulEffect from "../Carosoul";
 import Testnomials from "../Testnomials";
 import FeaturedWedding from "../FeaturedWedding";
 import Navbar from "../Navbar";
-import UpperNavbar from "../UpperNavbar";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import "./index.css";
+import { motion } from "framer-motion";
+import OurServices from "../OurServices";
+import { fadeIn } from "../../utils/varients";
 
 const Home = () => {
   return (
     <>
-      <UpperNavbar/>
       <Navbar />
       <div className="home-container">
         <div className="home-image-container">
           <div className="for-gradient">
-            <h1 className="home-container-heading">Be my Guest</h1>
-            <p className="home-container-para">
+            <motion.h1
+              initial={{ y: "2rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2, type: "spring" }}
+              className="home-container-heading"
+            >
+              Be my Guest
+            </motion.h1>
+            <motion.p
+              variants={fadeIn("left", 0.5, "spring", 50, 50)}
+              className="home-container-para"
+              initial="hidden"
+              whileInView={"show"}
+            >
               Indian weddings are the missing piece of your travel puzzle !
-            </p>
-            <p className="home-container-description">
+            </motion.p>
+
+            <motion.p
+              variants={fadeIn("right", 0.5, "spring", 50, 50)}
+              className="home-container-description"
+              initial="hidden"
+              whileInView={"show"}
+            >
               Be My Guest gives travelers the chance to be a guest of Indian
               cultural wedding.
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
-      <div className="container-home">
-        <h2 className="container-heading-home"> - Our Services - </h2>
-        <div className="services-container">
-          <div className="service-card">
-            <h2 className="service-card-heading">For Guests</h2>
-            <ul>
-              <li className="service-card-para">
-                Get engaged to with unique Indian culture.
-              </li>
-              <li className="service-card-para">
-                Get to know about the culture of India and its rich heritage.
-              </li>
-              <li className="service-card-para">
-                Get rid off boring office days.
-              </li>
-              <li className="service-card-para">Discover new destinations.</li>
-              <li className="service-card-para">Travel affordably.</li>
-              <li className="service-card-para">
-                Stay connected with your loved ones.
-              </li>
-            </ul>
-            <button className="service-card-button button-lg-devices">
-              Featured Wedding <MdOutlineKeyboardArrowDown size={22} />
-            </button>
-            <button className="service-card-button button-md-devices">
-              Featured Wedding{" "}
-            </button>
-          </div>
-          <div className="service-card">
-            <h2 className="service-card-heading">For Couples</h2>
-            <ul>
-              <li className="service-card-para">
-                Share your celebration with international Guests.
-              </li>
-              <li className="service-card-para">
-                Plan unique wedding experince.
-              </li>
-              <li className="service-card-para">
-                Reduce the Guest list stress.
-              </li>
-              <li className="service-card-para">Get financial support.</li>
-              <li className="service-card-para">
-                Stay connected with your loved ones.
-              </li>
-            </ul>
-            <button className="service-card-button">Became A Host</button>
-          </div>
-        </div>
-      </div>
+      <OurServices />
       <CarosoulEffect />
       <div className="compress-container">
         <div className="inner-compress-container">
