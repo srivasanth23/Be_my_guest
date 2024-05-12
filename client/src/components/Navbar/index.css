@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 .navbar{
-    height: 10vh;
+    height: 12vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -10,8 +10,11 @@
     padding: 0px 80px;
     z-index: 1000;
     font-weight: 450;
-    background: var(--accent);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
     position: fixed;
+    padding-top: 5px;
 }
 
 .navbar.active{
@@ -25,7 +28,7 @@
     width: 5vw;
 }
 
-.unordered-list{
+.unordered-list-navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -114,15 +117,15 @@
 
     .navbar-home-logo{
         height: 10vh;
-        width: 15vw;
+        width: 10vw;
     }
 
-    .unordered-list{
+    .unordered-list-navbar{
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         z-index: 10;
-        width: 230px;
+        width: 60%;
         background-color: var(--primary-text);
         height: 100vh;
         top: 0;
@@ -172,8 +175,19 @@
         color: var(--primary)
     }
 
-    #sidebar-check:checked ~ .unordered-list{
+    #sidebar-check:checked ~ .unordered-list-navbar{
         right: 0;
     }
 }
 
+@media screen and (max-width: 500px) {
+    .navbar-home-logo{
+        height: 10vh;
+        width: 15vw;
+        padding-top: 10px;
+    }
+
+    .unordered-list-navbar{
+        width: 70%;
+    }
+}

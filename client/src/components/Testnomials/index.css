@@ -7,13 +7,13 @@
     height: 100vh;
 }
 
-.testnomials-heading{
-    color: var(--secondary-text);
+.t-head{
+    margin-top: 30px;
+    color: var(--primary-text);
     font-weight: 400;
     font-family: 'Satisfy', cursive;
     font-size: 3em;
     align-self: center;
-    color: var(--primary-text);
 }
 
 .testnomials-cards-container{
@@ -26,7 +26,6 @@
 .testnomials-card{
     background-color: var(--secondary-text);
     border-radius: 5px;
-    height: 130px;
     width: 500px;
     display: flex;
     flex-direction: row;
@@ -36,6 +35,7 @@
     margin-left: 75px;
     padding: 10px;
 }
+
 
 .testnomials-image{
     height: 100px;
@@ -81,9 +81,16 @@
     color: var(--primary-text);
 }
 
+.testnomials-card:hover{
+    box-shadow: 0px 23px 21px -8px #3c3235;
+    scale: 1.1;
+}
+
+
+
 @media screen and (max-width: 768px) {
-    .test{
-        font-size: 20px;
+    .t-head{
+        font-size: 25px;
     }
 
     .testnomials-container{
@@ -95,8 +102,8 @@
 
     .testnomials-card{
         border-radius: 4px;
-        height: 90px;
-        width: 270px;
+        height: 100px;
+        width: 300px;
         margin: 10px 30px;
         padding: 5px;
     }
@@ -124,4 +131,20 @@
     .hide-mb-view{
         display: none;
     }
+
+    .testnomials-cards-container{
+        justify-content: center;
+        width: 100%;
+    }
 }
+
+@media screen and (max-width: 500px) {
+    .testnomials-card{
+        height: 110px;
+    }
+
+    .testnomials-cards-container>:nth-child(odd){
+        display: none;
+    }
+}
+
