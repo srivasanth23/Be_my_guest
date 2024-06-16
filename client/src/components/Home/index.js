@@ -1,16 +1,10 @@
-import CarosoulEffect from "../Carosoul";
-import Testnomials from "../Testnomials";
-import FeaturedWedding from "../FeaturedWedding";
-import Navbar from "../Navbar";
 import "./index.css";
 import { motion } from "framer-motion";
-import OurServices from "../OurServices";
 import { fadeIn } from "../../utils/varients";
 
 const Home = () => {
   return (
-    <>
-      <Navbar />
+    <section>
       <div className="home-container">
         <div className="home-image-container">
           <div className="for-gradient">
@@ -43,21 +37,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <OurServices />
-      <CarosoulEffect />
-      <div className="compress-container">
-        <div className="inner-compress-container">
-          <Testnomials />
-          <FeaturedWedding />
-        </div>
-      </div>
-      <div className="tesnomials-mobile-view">
-        <Testnomials />
-      </div>
-      <div className="featured-wedding-mobile-view">
-        <FeaturedWedding />
-      </div>
-    </>
+    </section>
   );
 };
 
