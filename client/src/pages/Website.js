@@ -25,7 +25,7 @@ const Website = () => {
           zIndex: 2000,
         }}
       ></motion.div>
-      <div className="App">
+      <div className="App innerWidth">
         {/* <AnimatedCursor
           innerSize={8}
           outerSize={8}

@@ -16,7 +16,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
     .cultures-image{
         width: 50vw;
         height: 20vh;
@@ -25,12 +24,11 @@
 
     .carousal-container{
         background-color: var(--primary-text);
-        height: 50vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 30px;
     }
 
 }

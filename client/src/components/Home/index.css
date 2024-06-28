@@ -1,295 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-
-body::-webkit-scrollbar{
-    display: none;
+body::-webkit-scrollbar {
+  display: none;
 }
 
-.home-container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+.h-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
 }
 
-.home-image-container{
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: none;
-    background-image: url('https://res.cloudinary.com/dlxjzmiig/image/upload/v1712407403/photo_cfd4bm.png');
-    height: 100vh;
-    background-attachment: fixed;
+.h-image-container {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: none;
+  background-image: url("https://res.cloudinary.com/dlxjzmiig/image/upload/v1712407403/photo_cfd4bm.png");
+  height: 100vh;
+  background-attachment: fixed;
 }
 
-.home-container-heading{
-    color: var(--primary-text);
-    font-weight: 600;
-    font-family: 'Satisfy', cursive;
-    font-size: 8em;
-    align-self: center;
+.h-gradient {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    var(--background),
+    rgba(0, 0, 0, 0)
+  );
 }
 
-.for-gradient{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-image: linear-gradient(to top, var(--background), rgba(0, 0, 0, 0));
+.h-heading {
+  color: var(--primary-text);
+  font-weight: 600;
+  font-family: "Satisfy", cursive;
+  font-size: 8em;
+  align-self: center;
 }
 
-.home-container-para{
-    margin: 0;
-    color: var(--secondary-text);
-    font-weight: 400;
-    font-family: 'Londrina Solid', cursive;
-    font-size: 2em;
+.h-para {
+  margin: 0;
+  color: var(--secondary-text);
+  font-weight: 400;
+  font-family: "Londrina Solid", cursive;
+  font-size: 2em;
 }
 
-.home-container-description{
-    margin: 0;
-    color: #ecd8bc;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
+.h-description {
+  margin: 0;
+  color: #ecd8bc;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
 }
 
-.container-home{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 70vh;
-    background-color:var(--background);
-    padding-top: 50px;
-    margin: 0;
+
+.title-alignment {
+  display: flex;
+  flex-direction: row;
 }
 
-.container-heading-home{
-    color: var(--primary-text);
-    font-weight: 400;
-    font-family: 'Satisfy', cursive;
-    font-size: 3em;
-    align-self: center;
-    margin: 0;
+.button-md-devices {
+  display: none;
 }
 
-.services-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 80%;
-    margin-top: 30px;
+.button-lg-devices {
+  display: flex;
 }
 
-.service-card-heading{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    color: #3f3335;
-    margin-left: 20px;
-    margin-bottom: 0;
+.cultures-container {
+  background-color: var(--primary-text);
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
 }
 
-.service-card-para{
-    font-family: 'poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--secondary-text);
-    margin-top: 0px;
+.cultures {
+  color: var(--primary);
 }
 
-.service-card-para::marker{
-    color: #3f3335;
+.tesnomials-mobile-view {
+  display: none;
 }
 
-.service-container-ul{
-    margin: none;
-    list-style-type: square;
+.compress-container {
+  background-color: var(--primary-text);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  padding-top: 100px;
 }
 
-.service-card-button{
-    font-family: 'poppins', sans-serif;
-    padding: 5px 17px;
-    border-radius: 30px;
-    border: 2px solid #403640;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background: #f6e6cc;
+.inner-compress-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: var(--background);
+  height: 100vh;
+  margin-top: 0px;
 }
 
-.service-card-button:hover{
-    background-color: #2b292b;
-    color: var(--secondary-text);
-}
-
-.button-md-devices{
-    display: none;
-}
-
-.button-lg-devices{
-    display: flex;
-}
-
-.cultures-container{
-    background-color: var(--primary-text);
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 50px;
-}
-
-.cultures{
-    color: var(--primary);
-}
-
-.tesnomials-mobile-view{
-    display: none;
-}
-
-.compress-container{
-    background-color: var(--primary-text);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100vw;
-    padding-top: 100px;
-}
-
-.inner-compress-container{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    background-color: var(--background);
-    height: 100vh;
-    margin-top: 0px;
-}
-
-.featured-wedding-mobile-view{
-    background-color: var(--primary-text);
-    display: none;
+.featured-wedding-mobile-view {
+  background-color: var(--primary-text);
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
-    .home-image-container{
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-    }
+  .h-image-container {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 
-    .home-container-heading{
-        font-size: 5em;
-    }
+  .h-heading {
+    font-size: 5em;
+  }
 
-    .home-container-para{
-        font-size: 18px;
-        text-align: center;
-    }
+  .h-para {
+    font-size: 18px;
+    text-align: center;
+  }
 
-    .home-container-description{
-        text-align: center;
-        font-size: 0.7em;
-    }
+  .h-description {
+    text-align: center;
+    font-size: 0.7em;
+  }
 
-    .container-home{
-        height: 60vh;
-    }
+  .container-home {
+    height: 60vh;
+  }
 
-    .container-heading-home{
-        font-size: 40px;
-        align-self: center;
-    }
+  .container-heading-home {
+    font-size: 40px;
+    align-self: center;
+  }
 
-    .cultures{
-        font-size: 30px;
-    }
+  .cultures {
+    font-size: 30px;
+  }
 
-    .services-container{
-        flex-direction: row;
-        justify-content: space-around;
-        align-self: center;
-        width: 90%;
-        height: 100%;
-        margin-top: 20px;
-    }
 
-    .service-card-heading{
-        font-size: 20px;
-    }
-    
-    .service-card-para{
-        font-size: 12px;
-    }
-    
-    .service-card-button{
-        padding: 5px 10px;
-        border-radius: 30px;
-        margin-left: 30px;
-        font-size: 12px;
-        color: var(--primary-text);
-        background: #f6e6cc;
-    }
+  .service-card-button {
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-left: 30px;
+    font-size: 12px;
+    color: var(--primary-text);
+    background: #f6e6cc;
+  }
 
-    .button-lg-devices{
-        display: none;
-    }
+  .button-lg-devices {
+    display: none;
+  }
 
-    .button-md-devices{
-        display: block;
-        background: #f6e6cc;
-    }
+  .button-md-devices {
+    display: block;
+    background: #f6e6cc;
+  }
 
-    .cultures-container{
-        padding: 30px;
-    }
+  .cultures-container {
+    padding: 30px;
+  }
 
-    .compress-container{
-        display: none;
-    }
+  .compress-container {
+    display: none;
+  }
 
-    .tesnomials-mobile-view{
-        display: flex;
-    }
+  .tesnomials-mobile-view {
+    display: flex;
+  }
 
-    .featured-wedding-mobile-view{
-        display: flex;
-    }
-    
+  .featured-wedding-mobile-view {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .home-container-heading{
-        font-size: 3em;
-    }
+  .h-heading {
+    font-size: 3em;
+  }
 
-    .services-container{
-        flex-direction: column;
-        justify-content: space-around;
-        width: 90%;
-    }
+  .container-home {
+    height: 100vh;
+  }
 
-    .service-card-button{
-        background: #f6e6cc;
-        padding: 3px 10px;
-    }
-
-    .container-home{
-        height: 100vh;
-    }
-
-    .cultures{
-        font-size: 20px;
-    }
+  .cultures {
+    font-size: 20px;
+  }
 }
