@@ -1,6 +1,4 @@
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../utils/varients";
 import "./index.css";
 
 const OurServices = () => {
@@ -12,11 +10,18 @@ const OurServices = () => {
       <div className="os-container-card-lg">
         <div className="innerWidth flexRowCenter">
           <div className=" flexRowCenter">
-            <img
-              src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1719594568/f8e53d02d05d4a8be3f8e4d5c74a9969-removebg-preview_uetlrt.png"
-              alt="traverller"
-              className="mb-screen"
-            />
+            <motion.div
+              initial={{ filter: "grayscale(100%)" }}
+              whileInView={{ filter: "grayscale(0%)" }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false, amount: "all" }}
+            >
+              <img
+                src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1719594568/f8e53d02d05d4a8be3f8e4d5c74a9969-removebg-preview_uetlrt.png"
+                alt="traverller"
+                className="mb-screen"
+              />
+            </motion.div>
             <div className="flexColStart">
               <h2 className="service-card-heading">For To-be-Married Couple</h2>
               <ul className="service-container-ul">
@@ -37,11 +42,18 @@ const OurServices = () => {
             </div>
           </div>
           <div className="flexRowCenter">
-            <img
-              src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1719596650/foreigner-png-removebg-preview_1_uefmbo.png"
-              alt="traverller"
-              className="mb-screen"
-            />
+            <motion.div
+              initial={{ filter: "grayscale(100%)" }}
+              whileInView={{ filter: "grayscale(0%)" }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false, amount: "all" }}
+            >
+              <img
+                src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1719596650/foreigner-png-removebg-preview_1_uefmbo.png"
+                alt="traverller"
+                className="mb-screen"
+              />
+            </motion.div>
             <div className="flexColStart">
               <h2 className="service-card-heading">For Foreigen Guest</h2>
               <ul className="service-container-ul">

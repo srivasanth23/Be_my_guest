@@ -14,6 +14,7 @@ const Header = () => {
       setNavbar(false);
     }
   };
+  //change navbar background but it is not working because locomotive.css scroller (remove it from Website.js)
 
   window.addEventListener("scroll", changebackground);
 

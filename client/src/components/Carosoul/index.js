@@ -6,7 +6,7 @@ import "./index.css";
 const CarosoulEffect = () => {
   return (
     <div className="carousal-container paddings innerWidth">
-      <h2 className="container-heading-home section-headings cultures">
+      <h2 className="container-heading-home section-headings cultures" >
         - Explore about Indian Wedding Cultures -
       </h2>
       <div style={{ width: "100vw" }}>

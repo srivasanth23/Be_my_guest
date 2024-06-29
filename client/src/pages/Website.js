@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import Home from "../components/Home";
 import CarosoulEffect from "../components/Carosoul";
 import Testnomials from "../components/Testnomials";
 import FeaturedWedding from "../components/FeaturedWedding";
 import OurServices from "../components/OurServices";
-import { motion, useScroll } from "framer-motion";
-// import AnimatedCursor from "react-animated-cursor";
+// import { motion, useScroll } from "framer-motion";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { AnimatePresence } from "framer-motion";
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 
 const Website = () => {
-  const { scrollYProgress } = useScroll();
+  const containerRef = useRef(null);
+  // const { scrollYProgress } = useScroll();
+
   return (
     <>
-      <motion.div
+      {/* <motion.div
         style={{
           scaleX: scrollYProgress,
           position: "fixed",
@@ -24,58 +28,51 @@ const Website = () => {
           background: "#bf7659",
           zIndex: 2000,
         }}
-      ></motion.div>
-      <div className="App innerWidth">
-        {/* <AnimatedCursor
-          innerSize={8}
-          outerSize={8}
-          color="1, 1, 1"
-          outerAlpha={0.2}
-          innerScale={0.7}
-          outerScale={5}
-          clickables={[
-            "a",
-            'input[type="text"]',
-            'input[type="email"]',
-            'input[type="number"]',
-            'input[type="submit"]',
-            'input[type="image"]',
-            "label[for]",
-            "select",
-            "textarea",
-            "button",
-            ".link",
-            {
-              target: ".custom",
-              options: {
-                innerSize: 12,
-                outerSize: 12,
-                color: "255, 255, 255",
-                outerAlpha: 0.3,
-                innerScale: 0.7,
-                outerScale: 5,
-              },
-            },
-          ]}
-        /> */}
-        <div>
-          <Home />
-        </div>
-        <OurServices />
-        <CarosoulEffect />
-        <div className="compress-container">
-          <div className="inner-compress-container">
-            <Testnomials />
-            <FeaturedWedding />
-          </div>
-        </div>
-        <div className="tesnomials-mobile-view">
-          <Testnomials />
-        </div>
-        <div className="featured-wedding-mobile-view">
-          <FeaturedWedding />
-        </div>
-      </div>
+      ></motion.div> UpperNavabar scroller*/}
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+          // ... all available Locomotive Scroll instance options
+          smartphone: {
+            smooth: true,
+          },
+          tablet: {
+            smooth: true,
+          },
+        }}
+        watch={
+          [
+            //..all the dependencies you want to watch to update the scroll.
+            //  Basicaly, you would want to watch page/location changes
+            //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+          ]
+        }
+        containerRef={containerRef}
+      >
+        <AnimatePresence>
+          <main data-scroll-container ref={containerRef}>
+            <div className="App innerWidth">
+              <div>
+                <Home />
+              </div>
+              <OurServices />
+              <CarosoulEffect />
+              <div className="compress-container">
+                <div className="inner-compress-container">
+                  <Testnomials />
+                  <FeaturedWedding />
+                </div>
+              </div>
+              <div className="tesnomials-mobile-view">
+                <Testnomials />
+              </div>
+              <div className="featured-wedding-mobile-view">
+                <FeaturedWedding />
+              </div>
+            </div>
+          </main>
+        </AnimatePresence>
+      </LocomotiveScrollProvider>
     </>
   );
 };
