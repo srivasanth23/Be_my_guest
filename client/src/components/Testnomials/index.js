@@ -4,7 +4,7 @@ import data from "../../utils/testnomials.json";
 const Testnomials = () => {
   return (
     <div className="testnomials-container">
-      <h2 className=" t-head">- What our clients say -</h2>
+      <h2 className=" t-head section-headings">- What our clients say -</h2>
       <div className="testnomials-cards-container">
         {data.map((item) => (
           <div className="testnomials-card" key={item.id}>

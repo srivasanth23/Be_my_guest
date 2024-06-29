@@ -1,4 +1,4 @@
-import Navbar from "../Navbar";
+import Header from "../Header";
 // import Footer from "../components/Footer";
 import { Outlet } from "react-router";
 
@@ -6,7 +6,7 @@ const Layouts = () => {
   return (
     <>
       <div style={{ background: "var(--black)", overflow: "hidden" }}>
-        <Navbar />
+        <Header />
         <Outlet />
       </div>
       {/* <Footer /> */}

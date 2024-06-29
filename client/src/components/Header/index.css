@@ -17,6 +17,17 @@
   padding-top: 5px;
 }
 
+.logo-name {
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+  align-self: flex-end;
+  margin: 0;
+  padding-bottom: 0.8rem;
+  font-size: 35px;
+  font-family: "Satisfy", cursive;
+}
+
 .navbar.active {
   background-color: var(--primary-text);
   box-shadow: var(--shadow);
@@ -112,6 +123,10 @@
   display: none;
 }
 
+.logo-name-mb {
+  display: flex;
+}
+
 @media only screen and (max-width: 1200px) {
   .navbar {
     padding: 30px;
@@ -181,6 +196,10 @@
   #sidebar-check:checked ~ .unordered-list-navbar {
     right: 0;
   }
+
+  .logo-name-mb {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -192,5 +211,9 @@
 
   .unordered-list-navbar {
     width: 70%;
+  }
+
+  .logo-name-mb {
+    display: none;
   }
 }

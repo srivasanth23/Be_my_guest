@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 import "./index.css";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
-const Navbar = () => {
+const Header = () => {
   const [navbar, setNavbar] = useState(false);
 
   const changebackground = () => {
@@ -16,16 +17,41 @@ const Navbar = () => {
 
   window.addEventListener("scroll", changebackground);
 
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      x: 50,
+    },
+    visible: {
+      opacity: 1,
+      x: -100,
+      transition: {
+        duration: 2,
+        delay: 0, // 2
+        ease: "anticipate",
+      },
+    },
+  };
+
   return (
     <nav className={navbar ? "navbar active" : "navbar"}>
-      <Link to="/">
-        
-        <img
-          alt="logo"
-          src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1715073413/Be-my-guest-logo-removebg-preview_m9xwwj.png"
-          className="navbar-home-logo"
-        />
-      </Link>
+      <div className="flexRowEnd">
+        <Link to="/">
+          <img
+            alt="logo"
+            src="https://res.cloudinary.com/dlxjzmiig/image/upload/v1718513654/Red_Typography_Initial_B_Logo__3_-removebg-preview_sknxf0.png"
+            className="navbar-home-logo"
+          />
+        </Link>
+        <motion.h2
+          className="logo-name logo-name-mb"
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          Be my Guest
+        </motion.h2>
+      </div>
       <input type="checkbox" id="sidebar-check" />
       <label htmlFor="sidebar-check" className="open-sidebar-button">
         <IoMenu size={32} color="#f6eddf" />
@@ -65,4 +91,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
